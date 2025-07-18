@@ -1,0 +1,23 @@
+# Configuração do Cloudflare Workers para o portal SeLigaNerd 2.0
+
+name = "seliganerd2-worker"
+main = "../packages/workers/dist/entry.worker.js"
+compatibility_date = "2025-07-18"
+
+[vars]
+HYPERDRIVE_DSN = "postgres://user:password@db.host:5432/seliganerd"
+
+[kv_namespaces]
+[[kv_namespaces]]
+binding = "STATIC_ASSETS"
+id = "__STATIC_KV_NAMESPACE_ID__"
+
+[hyperdrive]
+binding = "HYPERDRIVE"
+url = "https://api.hyperdrive.dev/v1"
+
+[env.production]
+account_id = "YOUR_ACCOUNT_ID"
+workers_dev = false
+route = "seliganerd.com/*"
+zone_id = "YOUR_ZONE_ID"

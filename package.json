@@ -1,0 +1,26 @@
+{
+  "name": "seliganerd2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portal SeLigaNerd 2.0 – ultrarrápido & AI‑first",
+  "scripts": {
+    "dev": "bun run apps/web:start",
+    "build": "bun run apps/web:build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "deploy": "bun run packages/workers:deploy"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "^2.0.0",
+    "@builder.io/qwik-city": "^2.0.0",
+    "tailwindcss": "^4.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "dependencies": {
+    "shadcn-ui": "latest"
+  }
+}

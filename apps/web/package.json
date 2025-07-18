@@ -1,0 +1,8 @@
+{
+  "name": "seliganerd2-web",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  }
+}
